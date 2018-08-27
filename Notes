@@ -1,0 +1,105 @@
+Node JS (https://nodejs.org/en/)
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+NPM (https://www.npmjs.com/)
+NPM is the package manager for JavaScript.
+
+Express (https://expressjs.com/)
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+$ npm init (Define our project Name,Version, Autor, Description, Entry Point "server.js" etc). created file "package.json"
+$ npm install --save express (Library or dependencies "MicroFrameworks" to run web server) add code to made/run web server easily on server.js (Create this file manually).
+$ node server.js (Run server.js file ) going to http://localhost:3000/
+
+Materialize (https://materializecss.com/)
+Is a modern responsive front-end framework based on Material Design.
+
+$ npm i --save materialize  (Install materialize)
+
+Gulp (https://gulpjs.com/)
+Is a toolkit for automating painful or time-consuming tasks in your development.
+
+Sass
+Is a pre-processor of css this can facility our manage css.
+
+$ npm i --save gulp gulp-sass (Install gulp and gulp-sass) (Create file Gulpfile.js manually) and (Create file index.scss manually)
+$ npm i --save-dev gulp gulp-sass (Install dependencies on "devDependencies" package-lock.json (Create file Gulpfile.js manually) and (Create file index.scss manually)
+
+* Gulpfile.js (File contain the task to do).
+* index.scss (File contain css properties of our application web and import it the materialize css)
+
+$ npm i -g gulp (Install gulp global because we can run gulp on anytime)
+$ npm i --save gulp-rename (Install gulp-rename to rename files)
+
+$ gulp (Execute Gulpfile.js  and run the tasks in this case is a array ['styles','Other Task'])
+
+Pug (https://github.com/pugjs/pug)
+Is a high-performance template engine.
+
+$ npm i --save pug (Install pug package previously was renamed Jade)
+
+* server.js specify on this file that we use a pug engine templates
+* views (Create manually views directory in this directory create file "index.pug")
+* index.pug (Use http://html2jade.org/ to convert html to  pug or jade)
+
+$ node server.js (Run server.js file ) going to http://localhost:3000/
+
+* Created assets directory manually this folder is used to save the all resources this directory cannot access users
+* Was created a Gulp Task to copied and moved all contained of assets to public
+
+Browserify (http://browserify.org/)
+Browserify is a tool for compiling node-flavored commonjs modules for the browser, you can use browserify to organize your code and use third-party libraries even if you don't use node itself in any other capacity except for bundling and installing packages with npm.
+
+Babel JS (https://babeljs.io/)
+Babel is a compiler for writing next generation JavaScript.
+
+$ npm install --save-dev browserify babelify babel-preset-env babel-core (Install Browserify and Babel JS)
+$ npm i --save-dev vinyl-source-stream (Install vinyl source stream)
+
+* Create directory src and file index.js manually
+* Was created a Gulp Task copied javascript code to app.js file on public directory
+
+Page JS https://github.com/visionmedia/page.js/
+$ npm i --save page (Install page.js) to created web application on a single page without refresh
+
+* index.js on this files we'll declare ours routes this
+* Note: its important declare our routes on server.js file because the Server we need know all requests to ours web application
+
+Script NPM (https://docs.npmjs.com/misc/scripts)
+Are used to facility commands on terminal this scripts are modified on package.json key scripts here can add more keys.
+
+$ npm run build (Run command define build and execute gulp command)
+
+Watchify (https://www.npmjs.com/package/watchify)
+Update any source file and your browserify bundle will be recompiled on the spot.
+
+$ npm i --save-dev watchify (Install watchify to verify is have any change on our code)
+
+Concurrently (https://www.npmjs.com/package/concurrently)
+Run multiple commands concurrently
+
+$ npm install -g concurrently (Install concurrently )
+
+* package.json is modified on scripts key was added the code("start": "concurrently \"gulp watch\" \"node server\" ")
+* Gulpfile.js was modified with two task [build, watch] and function compile
+* Note: concurrently is installed to fix a bug on Windows 10
+
+$ npm start( Run task [gulp, watch , node server.js ] to same time ) now we can modify our code on index.js and this it will be updated y server is running.
+
+Yo-yo (https://www.npmjs.com/package/yoyo)
+yoyo is a scaffolding tool.
+
+$ npm i --save yoyo (Install yo-yo we can join or concat strings  like html)
+
+* Using yo`HTML` we can concat string
+
+Empty-element(https://www.npmjs.com/package/empty-element)
+Empty a DOM element
+
+$ npm i --save empty-element (Install empty-element  to deleted elements on our page)
+
+* With empty() function deleted DOM on ours page
+* Created homepage, signup directories with their index.js and template.js file the reason is separate html of index.js main file
+
+
+
