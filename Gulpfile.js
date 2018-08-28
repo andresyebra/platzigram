@@ -70,4 +70,4 @@ gulp.task('watch', function () {
 });
 
 // Execute default task and send array
-gulp.task('default', ['styles', 'assets', 'build']);
+gulp.task('default', ['styles', 'assets']);
