@@ -2,15 +2,15 @@ var express = require('express');
 var app = express();
 var multer  = require('multer');
 var ext = require('file-extension');
-var port = process.env.PORT || 8080;
-var host = process.env.YOUR_HOST || '0.0.0.0';
+var port = process.env.PORT || 8000;
+
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './uploads')
+    cb(null, './uploads');
   },
   filename: function (req, file, cb) {
-    cb(null, +Date.now() + '.' + ext(file.originalname))
+    cb(null, +Date.now() + '.' + ext(file.originalname));
   }
 });
 
@@ -66,7 +66,7 @@ app.get('/api/pictures', function (req, res, next) {
 
   setTimeout(function () {
     res.send(pictures);
-  }, 2000)
+  }, 2000);
 });
 
 app.post('/api/pictures', function (req, res) {
@@ -75,14 +75,10 @@ app.post('/api/pictures', function (req, res) {
       return res.send(500, "Error uploading file");
     }
     res.send('File uploaded');
-  })
+  });
 });
 
-console.log('Platzigram escuchando en el puerto ' + port);
 //  Platizgram is running through this port on localhost
-app.listen(port, host, function (err) {
-
-    if (err) return console.log('Hubo un error'), process.exit(1);
-
+app.listen(port, function () {
     console.log('Platzigram escuchando en el puerto ' + port);
 });
