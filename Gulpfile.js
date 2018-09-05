@@ -49,15 +49,15 @@ function compile(watch) {
   rebundle();
 }
 
-// // Gulp Task created a index.js file on public directory
-// gulp.task('scripts', function () {
-//     browserify('./src/index.js')
-//         .transform(babel)
-//         .bundle()
-//         .pipe(source('index.js'))
-//         .pipe(rename('app.js'))
-//         .pipe(gulp.dest('public'));
-// });
+// Gulp Task created a index.js file on public directory
+gulp.task('scripts', function () {
+    browserify('./src/index.js')
+        .transform(babel)
+        .bundle()
+        .pipe(source('index.js'))
+        .pipe(rename('app.js'))
+        .pipe(gulp.dest('public'));
+});
 
 // Gulp Task created a index.js file on public directory
 gulp.task('build', function () {
