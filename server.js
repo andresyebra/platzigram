@@ -77,8 +77,10 @@ app.post('/api/pictures', function (req, res) {
   })
 });
 
+console.log('Platzigram escuchando en el puerto ' + port);
 //  Platizgram is running through this port on localhost
 app.listen(port, function (err) {
+
     if (err) return console.log('Hubo un error'), process.exit(1);
 
     console.log('Platzigram escuchando en el puerto ' + port);
