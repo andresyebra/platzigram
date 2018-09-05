@@ -24,7 +24,9 @@
     "page": "^1.8.6",
     "pug": "^2.0.3",
     "superagent": "^3.8.3",
-    "yo-yo": "^1.4.1",
+    "yo-yo": "^1.4.1"
+  },
+  "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-plugin-transform-regenerator": "^6.26.0",
@@ -38,8 +40,8 @@
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.0"
   },
-  "devDependencies": {
-  },
   "scripts": {
+    "build": "gulp",
+    "start": "concurrently \"gulp watch\" \"node server\" "
   }
 }
