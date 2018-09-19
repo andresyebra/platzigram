@@ -42,6 +42,6 @@
   },
   "scripts": {
     "build": "gulp",
-    "start": "concurrently \"gulp watch\" \"node server\" "
+    "start": "node server"
   }
 }
