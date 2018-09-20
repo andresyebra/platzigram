@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var multer  = require('multer');
 var ext = require('file-extension');
+var port = process.env.PORT;
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -77,7 +78,7 @@ app.post('/api/pictures', function (req, res) {
 });
 
 //  Platizgram is running through this port on localhost
-app.listen(process.env.PORT || 3000, function (err) {
+app.listen(port, function (err) {
 
     if (err) return console.log('Hubo un error'), process.exit(1);
 
