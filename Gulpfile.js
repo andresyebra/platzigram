@@ -44,8 +44,6 @@ function compile(watch) {
       .pipe(gulp.dest('public'));
   }
 
-
-
   rebundle();
 }
 
@@ -60,4 +58,4 @@ gulp.task('scripts', function () {
 });
 
 // Execute default task and send array
-gulp.task('default', ['styles', 'assets','scripts']);
+gulp.task('default', ['styles', 'assets']);
