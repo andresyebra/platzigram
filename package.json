@@ -41,7 +41,6 @@
   "devDependencies": {
   },
   "scripts": {
-    "build": "gulp",
     "start": "node server"
   }
 }
