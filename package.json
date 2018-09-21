@@ -41,6 +41,7 @@
   "devDependencies": {
   },
   "scripts": {
+    "postinstall" : "gulp",
     "start": "node server"
   }
 }

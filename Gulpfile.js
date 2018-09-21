@@ -58,4 +58,4 @@ gulp.task('scripts', function () {
 });
 
 // Execute default task and send array
-gulp.task('default', ['styles', 'assets']);
+gulp.task('default', ['styles', 'assets','scripts']);
