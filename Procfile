@@ -1,1 +1,1 @@
-web: gulp scripts
+web: gulp
